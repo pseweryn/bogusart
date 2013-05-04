@@ -69,22 +69,21 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-			<div id="container">
-				<div id="header">
+			<div class="container">
+				<header>
 					<div class="row">
-						<a href="index.html"><span id="logo" class="column grid_8"></span></a>
-						<div id="navcontainer" class="column grid_4">
-							<ul id="navlist">
+						<a href="index.html"><span class="logo column grid_8"></span></a>
+						<nav class="column grid_4">
+							<ul>
 								<li><a href="about.html">The Artist</a></li>
-								<li>|</li>
-								<li id="active"><a href="index.html" id="current">The Gallery</a></li>
+								<li class="invisible">|</li>
+								<li><a href="index.html">The Gallery</a></li>
 							</ul>
-						</div>
+						</nav>
 					</div>
-				</div>
+				</header>
 
-				<div id="content">
-				<div class="layoutGrey">
+				<div class="content">
 					<div class="row">
 					<h1>Shades</h1>
 						<div class="item column grid_4">
@@ -98,13 +97,13 @@
 						</div>
 					</div>
 				</div>
-				</div>
 
-				<div id="footer">
+
+				<footer>
 					<div class="row">
-						<div class="footersum column grid_6 ">
+						<div class="column grid_6">
 							<h1><a href="index.html">The Gallery</a></h1>
-							<ul class="footerlist">
+							<ul>
 								<li><a href="paintings.html">Paintings</a></li>
 								<li><a href="sepia.html">Sepia</a></li>
 								<li><a href="shades.html">Shades</a></li>
@@ -113,16 +112,16 @@
 								<li><a href="uncategorized.html">Uncategorized</a></li>
 							</ul>
 						</div>
-						<div class="footersum column grid_6">
+						<div class="column grid_6">
 							<h1><a href="about.html">The Artist</a></h1>
-							<ul class="footerlist">
+							<ul>
 								<li><img src="img/facebook-icon-24.png"><a href="http://www.facebook.com/z.boguslawski">Facebook</a></li>
 								<li><img src="img/myspace-icon-24.png"><a href="http://www.myspace.com/bogusart">MySpace</a></li>
 								<li><img src="img/wordpress-icon-24.png"><a href="http://bogusart.wordpress.com/">WordPress</a></li>
 							</ul>
 						</div>
 					</div>
-				</div>
+				</footer>
 			</div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
@@ -131,12 +130,5 @@
 		<script src="lightbox/lightbox.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
     </body>
 </html>

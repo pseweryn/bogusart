@@ -7,6 +7,7 @@
 
 	this.get('#/portofolio', function(context) {
 	$('#myCarousel').fadeIn();
+	$('footer').show();
 		  context.app.swap('');
 		  this.renderEach('templates/box.ms', [{link: routes[0], img:'illustr.jpg', title: 'Illustrations'}, 
 											  {link: routes[1], img:'draw.jpg', title: 'Drawings'},
@@ -19,6 +20,7 @@
   
   	this.get(routes[0], function(context) {
 	$('#myCarousel').fadeOut();
+	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>Illustrations</h1>');
 		  this.renderEach('templates/image.ms', [{link: folders[0] + '/00clearcutfull.jpg'}, {link: folders[0] + '/00CoverFullCleaned.jpg'}, 
@@ -35,6 +37,7 @@
 
   	this.get(routes[1], function(context) {
 	$('#myCarousel').fadeOut();
+	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>Drawings</h1>');
 		  this.renderEach('templates/image.ms', [{link: folders[1] + '/IMG_6939.jpg'}, {link: folders[1] + '/IMG_6niou937.jpg'}, 
@@ -48,6 +51,7 @@
 	  
   	this.get(routes[2], function(context) {
 	$('#myCarousel').fadeOut();
+	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>Graphics</h1>');
 		  this.renderEach('templates/image.ms', [{link: folders[2] + '/06.jpg'}, {link: folders[2] + '/autoportret.jpg'}, 
@@ -60,6 +64,7 @@
 	  
   	this.get(routes[3], function(context) {
 	$('#myCarousel').fadeOut();
+	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>Photography</h1>');
 		  this.renderEach('templates/image.ms', [{link: folders[3] + '/105_0592.JPG'}, {link: folders[3] + '/DSC02263.JPG'}, 
@@ -75,6 +80,7 @@
 	  
 	this.get(routes[4], function(context) {
 	$('#myCarousel').fadeOut();
+	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>Painting</h1>');
 		  this.renderEach('templates/image.ms', [{link: folders[4] + '/20.jpg'}, {link: folders[4] + '/21.jpg'}, {link: folders[4] + '/chata.jpg'}, {link: folders[4] + '/domek1.jpg'}, {link: folders[4] + '/karyn.jpg'}])
@@ -83,6 +89,7 @@
 	  
 	this.get(routes[5], function(context) {
 	$('#myCarousel').fadeOut();
+	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>Other</h1>');
 		  this.renderEach('templates/image.ms', [{link: folders[5] + '/poster_smaller.jpg'}, {link: folders[5] + '/vasXe_jotpeg.jpg'}])
@@ -91,8 +98,10 @@
 	  
 	this.get('#/about', function(context) {
 	$('#myCarousel').fadeOut();
+	$('footer').hide();
 		  context.app.swap('');
-		  context.$element().append('<h1>About</h1>');	
+		  this.render('templates/about.ms')
+		  .appendTo(context.$element());		  
 	  });   	  
 });
 
@@ -110,7 +119,8 @@ function initHoverBoxes(){
 
 function initSlider(){
 	if($(document.documentElement).hasClass('no-touch')){
-		$('.item.active').cycle({ speed: 3000});
+		$('#myCarousel').carousel();
+		//$('.carousel-control').css('display', 'none');
 	}
 	else{ 
 		$('#myCarousel').carousel();

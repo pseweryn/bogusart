@@ -1,3 +1,3 @@
-<div class="item column grid_4">
-	<a href="img/{{link}}" rel="lightbox[images]"><img class="center" src="img/{{link}}"></a>
-</div>
+<a href="img/{{link}}" rel="lightbox[images]">
+	<div class="item column grid_3" style="background: url(img/{{link}}) center;"></div>
+</a>

@@ -119,6 +119,7 @@ html,body {
 h1, h2{
 	margin: 10px;
 	font-family: 'open_baskerville_0.0.75normal', Helvetica, Arial;
+	margin-left:50px;
 }
 
 p{
@@ -161,7 +162,6 @@ a:hover{
 .grid_12 { width:940px; }
 
 .column {
-	margin: 0 5px;
 	overflow: hidden;
 	float: left;
 	display: inline;
@@ -191,9 +191,14 @@ a:hover{
 	width: 960px;
 	margin: 0 auto;
 	overflow: hidden;
-	padding-bottom: 60px;
-	padding-top: 60px;
+	padding-bottom: 50px;
+	padding-top: 50px;
 }
+
+.logo img{
+	width: auto;
+}
+
 #portofolio{
 	width: auto;
 	margin: 0 auto;
@@ -211,15 +216,13 @@ a:hover{
 
 /* CONTENT */
 
-.content{
+.textContent{
 	width: 960px;
 	margin: 0 auto;
-	background: rgba(29, 29, 29, 0.3);
-	/* bottom padding for footer */
-	padding:1em 1em 12em; 
 }
 
 .boxgrid{
+	margin-left: 50px;
 	width: 250px;
 	height: 250px;
 	float:left;
@@ -228,6 +231,10 @@ a:hover{
 	position: relative;
 	margin-bottom: 20px;
 }
+
+/* .boxgrid:first-child{
+	margin-left: 20px;
+} */
 
 .boxgrid img{
 	position: absolute;
@@ -244,21 +251,24 @@ a:hover{
 	height: 100px;
 	width: 100%;
 	text-align:right;
-	opacity: .8;
+	opacity: .7;
 	/* For IE 5-7 */
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
 	/* For IE 8 */
-	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 }
 
-.floatright{
-	float: right;
+.mugshot{
 	padding: 0.5em;
 	margin: 2em 0 2em 2em;
 	background-color: #FFF;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
+}
+
+.marginReset{
+	margin-left:0;
 }
 
 .contactme{
@@ -276,34 +286,25 @@ a:hover{
 
 /* FOOTER */
 footer {
-	background:#161613;
-	opacity: .8;
-	/* For IE 5-7 */
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-	/* For IE 8 */
-	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-	width: 960px;
 	margin: 0 auto;
 	overflow: hidden;
 }
 
+.pull-right {
+    float: right;
+}
 
+.pull-left {
+    float: left;
+}
 
 /* END OF FOOTER */
 
 /* IMAGES */
 
-img.center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .item {
-	margin-top: 20px;
-}
-
-.item .center{
+	margin-top: 50px;
+	margin-left: 50px;
 	width: 200px;
 	height: 200px;
 }
@@ -514,7 +515,7 @@ img.center {
   overflow: hidden;
 }
 
-.carousel-inner > .item {
+.carousel-inner > .slide {
   position: relative;
   display: none;
   -webkit-transition: 0.6s ease-in-out left;
@@ -523,7 +524,7 @@ img.center {
           transition: 0.6s ease-in-out left;
 }
 
-.carousel-inner > .item > img {
+.carousel-inner > .slide > img {
   display: block;
   line-height: 1;
 }
@@ -613,43 +614,103 @@ img.center {
       border: 0;
     }
 
-    .carousel .item {
+    .carousel .slide {
       height: 500px;
+	  margin-top: 20px;
+	  margin-left: 20px;
+	  margin-right: 20px;
     }
     .carousel img {
       position: absolute;
       top: 0;
       left: 0;
       min-width: 100%;
-      height: 500px;
+      height: auto;
     }
+	
+	 /* Sticky footer styles
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      footer {
+        height: 60px;
+      }
+
+
+      /* Lastly, apply responsive CSS fixes as necessary 
+      @media (max-width: 767px) {
+        footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }*/
 
     /* RESPONSIVE CSS
     -------------------------------------------------- */
 
+
+	
     @media (max-width: 979px) {
 
-      .carousel .item {
+      .carousel .slide {
         height: 500px;
       }
       .carousel img {
         width: auto;
-        height: 500px;
+        height: auto;
       }
+	}
 
     @media (max-width: 767px) {
 
-      .carousel, .logo {
+      .carousel {
         margin-left: -20px;
         margin-right: -20px;
       }
       .carousel .container {
 
       }
-      .carousel .item {
+      .carousel .slide {
         height: 300px;
       }
-      .carousel img {
-        height: 300px;
-      }
+
+	  .logo{
+		width: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+	  } 
+	  .textContent, .grid_12{
+		  width:auto;
+          padding-left: 20px;
+          padding-right: 20px;
+	  }
+	  .contactme li {
+			display: block;
+		}
     }
+	
+	@media (max-width: 480px) {
+	
+		#myCarousel{
+			display: none;
+			}
+	}
+	     

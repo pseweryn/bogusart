@@ -65,37 +65,40 @@
 
   <body>
 
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-			<img src="img/slider/00clearcutfull.jpg" alt="">
-		  	<img src="img/slider/00CoverFull.jpg" alt="">
-			<img src="img/slider/00PosterFull.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="img/slider/00CoverFull.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="img/slider/00PosterFull.jpg" alt="">
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!-- /.carousel -->
+		<div id="wrap">	
+			
+			<!-- Carousel
+			================================================== -->
+			<div id="myCarousel" class="carousel slide">
+			  <div class="carousel-inner">
+				<div class="slide active">
+					<a href="img/slider/00clearcutfull.jpg" rel="lightbox[images]"><img src="img/slider/00clearcutfull.jpg" alt=""></a>
+				</div>
+				<div class="slide">
+				  <a href="img/slider/00CoverFull.jpg" rel="lightbox[images]"><img src="img/slider/00CoverFull.jpg" alt=""></a>
+				</div>
+				<div class="slide">
+				  <a href="img/slider/00PosterFull.jpg" rel="lightbox[images]"><img src="img/slider/00PosterFull.jpg" alt=""></a>
+				</div>
+			  </div>
+			  <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+			  <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			</div><!-- /.carousel -->
 
-
-    <!-- Main content
-    ================================================== -->
-
-		<div class="logo">
-			<section class="column grid_12">
-				<a href="#/portofolio"><img src="img/bogusarttransparentwhitesmaller.png"></a>
-			</section>
-		</div>
-	
-		<div id="portofolio"></div>	
+			<!-- Main content
+			================================================== -->
+			<div class="logo">
+					<a href="#/portofolio"><img src="img/bogusarttransparentwhitesmaller.png"></a>
+			</div>
+			<div id="portofolio"></div>
+			<div id="push"></div>
+		</div>		
+		<footer class='grid_5'>
+			<h2 class='pull-left marginReset'><a href="#/about">About me</a></h2>
+			<span class='pull-left'><a href="http://bogusart.wordpress.com/"><img src="img/icons/wordpress-icon-48.png"></a></span>
+			<span class='pull-left'><a href="http://www.facebook.com/z.boguslawski"><img src="img/icons/facebook-icon-48.png"></a></span>
+			<span class='pull-left'><a href="http://www.myspace.com/bogusart"><img src="img/icons/myspace-icon-48.png"></a></span>
+		</footer>
 
     <!-- Le javascript
     ================================================== -->
@@ -103,7 +106,6 @@
     <script src="js/jquery-1.8.2.min.js"></script>
 	<script src="js/bootstrap-transition.js"></script>
 	<script src="js/bootstrap-carousel.js"></script>
-    <script src="js/jquery.cycle.all.js"></script>
 	<script src="js/sammy.js"></script>
 	<script src="js/mustache.js"></script>
 	<script src="js/sammy.mustache.js"></script>

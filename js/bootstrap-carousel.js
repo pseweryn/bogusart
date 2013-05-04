@@ -45,7 +45,7 @@
     }
 
   , to: function (pos) {
-      var $active = this.$element.find('.item.active')
+      var $active = this.$element.find('.slide.active')
         , children = $active.parent().children()
         , activePos = children.index($active)
         , that = this
@@ -87,7 +87,7 @@
     }
 
   , slide: function (type, next) {
-      var $active = this.$element.find('.item.active')
+      var $active = this.$element.find('.slide.active')
         , $next = next || $active[type]()
         , isCycling = this.interval
         , direction = type == 'next' ? 'left' : 'right'
@@ -99,7 +99,7 @@
 
       isCycling && this.pause()
 
-      $next = $next.length ? $next : this.$element.find('.item')[fallback]()
+      $next = $next.length ? $next : this.$element.find('.slide')[fallback]()
 
       e = $.Event('slide', {
         relatedTarget: $next[0]

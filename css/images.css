@@ -1,0 +1,10 @@
+img.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.item {
+margin-top: 20px;
+/*-moz-border-image: url(../img/greyLogoBackground.png) 27 repeat stretch;*/
+}

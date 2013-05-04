@@ -139,13 +139,26 @@ div#footer {
 	margin: 0 auto;
 }
 
-p::first-letter {
+/*p::first-letter {
 margin-top: -12px;
 margin-right: 4px;
 float: left;
 font-size: 72px;
 color: #999;
+}*/
+
+p{
+	text-align: justify;
+	text-justify: distribute;
 }
+
+a:hover{
+	color: #000;
+}
+
+/*li a:hover{
+	outline: 2px solid #999;
+}*/
 
 /* ================ */
 /* = The 1Kb Grid = */     /* 12 columns, 60 pixels each, with 20 pixel gutter */
@@ -230,10 +243,16 @@ width: 960px;
 margin: 0 auto;
 background-color: #4F4F4F;
 padding-top: 20px;
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
 }
 
 #header  .row{
 background-image: url(../img/greyLogoBackground.png);
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+border-radius: 15px;
 }
 
 #header #logo {
@@ -252,6 +271,58 @@ padding-left: 20px;
 padding-left: 20px;
 margin-top: 40px;
 }
+
+/*#navlist {
+margin: 0;
+padding: 7px 6px 0;
+background: #7d7d7d;
+line-height: 100%;
+border-radius: 2em;
+-webkit-border-radius: 2em;
+-moz-border-radius: 2em;
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,.4);
+box-shadow: 0 1px 3px rgba(0,0,0,.4);
+background: -webkit-gradient(linear, left top, left bottom, from(darkGray), to(rgb(122,
+122, 122)));
+background: -moz-linear-gradient(top, darkGray, rgb(122, 122, 122));
+}
+
+#navlist .current a, #navlist li:hover > a {
+background: #666;
+color: #444;
+border-top: solid 1px #f8f8f8;
+-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.2);
+-moz-box-shadow: 0 1px 1px rgba(0,0,0,.2);
+box-shadow: 0 1px 1px rgba(0,0,0,.2);
+text-shadow: 0 1px 0 rgba(255,255,255,1);
+background: -webkit-gradient(linear, left top, left bottom, from(rgb(235,
+235, 235)), to(rgb(161, 161, 161)));
+background: -moz-linear-gradient(top, rgb(235, 235, 235), rgb(161, 161,
+161));
+}
+
+#navlist ul {
+display: none;
+margin: 0;
+padding: 0;
+width: 185px;
+position: absolute;
+top: 35px;
+left: 0;
+background: #ddd;
+border: solid 1px #b4b4b4;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+box-shadow: 0 1px 3px rgba(0,0,0,.2);
+background: -webkit-gradient(linear, left top, left bottom,
+from(white), to(rgb(207, 207, 207)));
+background: -moz-linear-gradient(top, white, rgb(207, 207, 207));
+}*/
+
 /* END OF HEADER */
 
 /* CONTENT */
@@ -270,17 +341,23 @@ float: right;
 padding-left: 1em;
 padding-top: 1em;
 }
+
 /* END OF CONTENT */
 
 /* FOOTER */
 #footer {
-
 background-color: #4F4F4F;
 color: #AAAAAA;
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
 }
 
 #footer  .row{
 background-image: url(../img/greyLogoBackground.png);
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+border-radius: 15px;
 }
 
 #footer h1 {
@@ -291,7 +368,7 @@ padding-bottom: 5px;
 
 #footer .footerlist
 {
-padding-left: 0px;
+padding-left: 1em;
 }
 
 #footer .footerlist li

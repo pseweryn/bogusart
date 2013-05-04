@@ -1,0 +1,39 @@
+#portfolio {
+}
+
+#portfolio .boxgrid{
+width: 300px;
+height: 300px;
+float:left;
+background:#161613;
+overflow: hidden;
+position: relative;
+margin-bottom: 20px;
+}
+
+#portfolio .boxgrid img{
+position: absolute;
+top: 0;
+left: 0;
+border: 0;
+}
+
+#portfolio .boxcaption{
+float: left;
+position: absolute;
+top: 300px;
+background: #000;
+height: 100px;
+width: 100%;
+text-align:right;
+color:#FFFFFF;
+opacity: .8;
+/* For IE 5-7 */
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+/* For IE 8 */
+-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+#portfolio .portfolioblurb{
+padding-bottom: 20px;
+}

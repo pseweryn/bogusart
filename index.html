@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>BogusArt</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<script type="text/javascript" src="js/jquery-1.js"></script>
+</head>
+<body>
+
+	<div id="container">
+		<div id="header">
+			<div class="row">
+				<div id="logo" class="column grid_8">
+				</div>
+				<div id="navcontainer" class="column grid_4">
+					<ul id="navlist">
+						<li><a href="http://www.terrortylor.org/bogusart/first/contact.html">Contact</a></li>
+						<li>|</li>
+						<li><a href="http://www.terrortylor.org/bogusart/first/about.html">About</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="content">
+			<div id="portfolio">
+				<div class="row">
+					<div class="portfolioblurb column grid_12">
+					Eum malis numquam ne, dolor commodo perpetua sit ex, usu impedit 
+sensibus suavitate et. Mei an putant graecis. Id mel persius intellegat,
+ sit ei feugait propriae. Duo id tation mnesarchum interpretaris, 
+principes omittantur conclusionemque cu has, at ius congue denique.
+					<br><br>Has ne soluta quidam antiopam. Doctus nostrum mandamus eum 
+et, error cetero aliquip his te. No vero diceret nam. Vocibus percipitur
+ eu eos, ludus disputationi ad mei. Quando aliquip nec an.
+					</div>
+				</div>
+			
+			
+			
+				<div class="row">
+					<div class="column grid_4">
+						<div class="boxgrid slidedown">
+							<a href="http://www.terrortylor.org/bogusart/first/category.html">
+							<img src="img/home/paint.jpg">
+							<div style="top: 300px;" class="cover boxcaption">
+								<h3>Paintings</h3>
+							</div>
+							</a>
+						</div>
+					</div>
+					<div class="column grid_4">
+						<div class="boxgrid slidedown">
+							<a href="http://www.terrortylor.org/bogusart/first/category.html">
+							<img src="img/home/sepia.jpg">
+							<div style="top: 300px;" class="cover boxcaption">
+								<h3>Sepia</h3>
+							</div>
+							</a>
+						</div>
+					</div>
+					<div class="column grid_4">
+						<div class="boxgrid slidedown">
+							<a href="http://www.terrortylor.org/bogusart/first/category.html">
+							<img src="img/home/shade.jpg">
+							<div class="cover boxcaption">
+								<h3>Shades</h3>
+							</div>
+							</a>
+						</div>
+					</div>
+					<div class="column grid_4">
+						<div class="boxgrid slidedown">
+							<a href="http://www.terrortylor.org/bogusart/first/news.html">
+							<img src="img/home/illustration.jpg">
+							<div class="cover boxcaption">
+								<h3>Illustrations</h3>
+							</div>
+							</a>
+						</div>
+					</div>
+					<div class="column grid_4">
+						<div class="boxgrid slidedown">
+							<a href="http://www.terrortylor.org/bogusart/first/news.html">
+							<img src="img/home/graphics.jpg">
+							<div class="cover boxcaption">
+								<h3>Graphics</h3>
+							</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div class="row">
+				<div class="footersum column grid_4">
+					<h1>Pages</h1>
+					<ul class="footerlist">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footersum column grid_4">
+					<h1>Links</h1>
+					<ul class="footerlist">
+						<li><a href="#">TerrorTylor.com</a></li>
+						<li><a href="#">Google.com</a></li>
+						<li><a href="#">Otaku.com</a></li>
+					</ul>
+				</div>
+				<div class="footersum column grid_4">
+					<h1>Social</h1>
+					<ul class="footerlist">
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">MySpace</a></li>
+						<li><a href="#">Twitter</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+$(document).ready(function(){
+	$('.boxgrid.slidedown').hover(function(){
+		$(".cover", this).stop().animate({top:'200px'},{queue:false,duration:300});
+	}, function() {
+		$(".cover", this).stop().animate({top:'300px'},{queue:false,duration:300});
+	});
+});
+</script>
+</body></html>

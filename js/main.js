@@ -8,9 +8,7 @@ var engine = $.sammy(function() {
 	this.element_selector = '#portofolio';  
 
 	this.get('#/portofolio', function(context) {
-	if(!isMobile()){
-		$('.fader').fadeIn();
-	}
+	initFader();
 	$('footer').show();
 		  context.app.swap('');
 		  this.renderEach('templates/box.ms', [{link: routes[0], img:'illustr.jpg', title: folders[0]}, 
@@ -23,7 +21,7 @@ var engine = $.sammy(function() {
 	  });  
   
   	this.get(routes[0], function(context) {
-	$('.fader').fadeOut();
+	$('.fader-inner').remove();
 	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>' + folders[0] +'</h1>');
@@ -31,7 +29,7 @@ var engine = $.sammy(function() {
 	  });
 
   	this.get(routes[1], function(context) {
-	$('.fader').fadeOut();
+	$('.fader-inner').remove();
 	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>' + folders[1] +'</h1>');
@@ -39,7 +37,7 @@ var engine = $.sammy(function() {
 	  });
 	  
   	this.get(routes[2], function(context) {
-	$('.fader').fadeOut();
+	$('.fader-inner').remove();
 	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>' + folders[2] +'</h1>');
@@ -47,7 +45,7 @@ var engine = $.sammy(function() {
 	  });
 	  
   	this.get(routes[3], function(context) {
-	$('.fader').fadeOut();
+	$('.fader-inner').remove();
 	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>' + folders[3] +'</h1>');
@@ -55,7 +53,7 @@ var engine = $.sammy(function() {
 	  });
 	  
 	this.get(routes[4], function(context) {
-	$('.fader').fadeOut();
+	$('.fader-inner').remove();
 	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>' + folders[4] +'</h1>');
@@ -63,7 +61,7 @@ var engine = $.sammy(function() {
 	  });
 	  
 	this.get(routes[5], function(context) {
-	$('.fader').fadeOut();
+	$('.fader-inner').remove();
 	$('footer').show();
 		  context.app.swap('');
 		  context.$element().append('<h1>' + folders[5] +'</h1>');
@@ -71,7 +69,7 @@ var engine = $.sammy(function() {
 	  });
 	  
 	this.get('#/about', function(context) {
-	$('.fader').fadeOut();
+	$('.fader-inner').remove();
 	$('footer').hide();
 		  context.app.swap('');
 		  this.render('templates/about.ms')
@@ -81,6 +79,7 @@ var engine = $.sammy(function() {
 
 function initFader(){
 	if(!isMobile()){
+		$('.fader').append('<div class="fader-inner"><img src="img/slider/1-clearcutfull.jpg" alt=""><img src="img/slider/Cover-Full-JPG-cleaned.jpg" alt=""><img src="img/slider/farwell-smaller.jpg" alt=""><img src="img/slider/ff-Poster-Full-cleaned.jpg" alt=""><img src="img/slider/k-N-AM-III-RGBb-cover.jpg" alt=""><img src="img/slider/n-krzakowykonkret.jpg" alt=""><img src="img/slider/regrowth.jpg" alt=""><img src="img/slider/Reqiem.jpg" alt=""><img src="img/slider/sharpmindXlarge.jpg" alt=""><img src="img/slider/stokenewington9.jpg" alt=""></div>');
 		$('.fader-inner').innerfade({
 			speed: 3000,
 			timeout: 5500,
@@ -94,7 +93,7 @@ function isMobile(){
 	return document.body.clientWidth <= 640;
 }
 
-$(document).ready(function(){
-	engine.run('#/portofolio');	
-	initFader();
-});
+
+$(function() {
+	engine.run('#/portofolio');
+}); 

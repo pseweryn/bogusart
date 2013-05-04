@@ -1,5 +1,5 @@
 <div class="textContent">
-	<h1 class="marginReset">About</h1>					
+	<h1 class="marginReset">about</h1>					
 	<div class="column grid_12">
 	<div class="mugshot pull-right"> <img src="img/autoportret.jpg"> </div>
 		<p>My name is Zbigniew Boguslawski, I am an illustrator, painter, graphic designer... </p>
@@ -9,10 +9,12 @@
 		<p>For over 10 years (five years of Secondary School of Arts in Cracow, five years at the Institute of Art &#8211; part of the Pedagogical Academy of Cracow and one year at the Academy of Art &amp; Design in Helsinki). I have been studying this subject and now I continue to work in this field.
 		</p>
 		<div class ="contactme">
-			<p>To learn more, or to get in touch with me, visit:</p>
+			<p>If you want to use my work, please contact me directly.</p>
+			<p>To learn more, visit:</p>
 			<ul>
 				<li><a href="http://bogusart.wordpress.com/"><img src="img/icons/wordpress-icon-48.png"> WordPress</a></li>
 				<li><a href="http://www.facebook.com/z.boguslawski"><img src="img/icons/facebook-icon-48.png"> Facebook</a></li>
+				<li><a href="http://www.behance.net/bogusart"><img src="img/icons/behance-icon-48.png"> Behance</a></li>
 				<li><a href="http://www.myspace.com/bogusart"><img src="img/icons/myspace-icon-48.png"> MySpace</a></li>
 			</ul>
 		</div>

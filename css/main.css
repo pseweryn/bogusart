@@ -112,13 +112,12 @@ html,body {
 	background-color: #3A3A3A;
 	color: #AAAAAA;
 	border: none;
-	cursor: auto;	
-	font-family: 'inderregular', Helvetica, Arial, sans-serif;
+	cursor: auto;		
+	font-family: 'underwood_championregular', Helvetica, Arial, sans-serif;
 }
 
 h1, h2{
 	margin: 10px;
-	font-family: 'open_baskerville_0.0.75normal', Helvetica, Arial;
 	margin-left:50px;
 }
 
@@ -171,7 +170,7 @@ a:hover{
 	overflow: visible;
 }
 
-/*.logo {
+.logo {
   margin-left: -20px;
   *zoom: 1;
 }
@@ -185,7 +184,7 @@ a:hover{
 
 .logo:after {
   clear: both;
-}*/
+}
 
 .logo{
 	width: 960px;
@@ -232,10 +231,6 @@ a:hover{
 	margin-bottom: 20px;
 }
 
-/* .boxgrid:first-child{
-	margin-left: 20px;
-} */
-
 .boxgrid img{
 	position: absolute;
 	top: 0;
@@ -259,12 +254,7 @@ a:hover{
 }
 
 .mugshot{
-	padding: 0.5em;
 	margin: 2em 0 2em 2em;
-	background-color: #FFF;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
 }
 
 .marginReset{
@@ -272,7 +262,7 @@ a:hover{
 }
 
 .contactme{
-	width:50%;
+	width:60%;
 }
 
 .contactme ul {
@@ -282,7 +272,6 @@ a:hover{
 .contactme li {
 	display: inline;
 }
-/* END OF CONTENT */
 
 /* FOOTER */
 footer {
@@ -298,18 +287,21 @@ footer {
     float: left;
 }
 
-/* END OF FOOTER */
+footer .marginReset{
+	margin-left:10px;
+}
 
+.copyright .entity{
+	font-family: Helvetica, Arial, sans-serif;
+}
 /* IMAGES */
 
 .item {
 	margin-top: 50px;
 	margin-left: 50px;
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 }
-
-/* END OF IMAGES */
 
 /* ==========================================================================
    Helper classes
@@ -566,7 +558,9 @@ footer {
 .carousel-inner > .active.right {
   left: 100%;
 }
-
+.no-touch .carousel-control{
+	display: none;
+}
 .carousel-control {
   position: absolute;
   top: 40%;
@@ -653,21 +647,9 @@ footer {
       }
 
 
-      /* Lastly, apply responsive CSS fixes as necessary 
-      @media (max-width: 767px) {
-        footer {
-          margin-left: -20px;
-          margin-right: -20px;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-      }*/
-
     /* RESPONSIVE CSS
     -------------------------------------------------- */
 
-
-	
     @media (max-width: 979px) {
 
       .carousel .slide {
@@ -696,6 +678,7 @@ footer {
 		width: auto;
 		padding-left: 20px;
 		padding-right: 20px;
+		margin-top: -100px;
 	  } 
 	  .textContent, .grid_12{
 		  width:auto;
@@ -705,6 +688,7 @@ footer {
 	  .contactme li {
 			display: block;
 		}
+
     }
 	
 	@media (max-width: 480px) {
@@ -712,5 +696,8 @@ footer {
 		#myCarousel{
 			display: none;
 			}
+		.logo{
+		margin-top: 0;
+	  } 
 	}
 	     

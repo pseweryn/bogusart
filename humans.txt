@@ -3,13 +3,10 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
-
+    <Zbigniew Boguslawski> -- <artwork & design>
+	<Pawel Seweryn> -- <code, markup & styles>
+	
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr
+    jQuery, Modernizr, Sammy.js, Mustache.js, Innerfade.js, h5bp, Bootstrap

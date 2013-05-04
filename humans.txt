@@ -4,7 +4,7 @@
 # TEAM
 
     <Zbigniew Boguslawski> -- <artwork & design>
-	<Pawel Seweryn> -- <code, markup & styles>
+	<Pawel Seweryn> -- <code, markup & styles> -- <http://twitter.com/pawelseweryn>
 	
 # TECHNOLOGY COLOPHON
 

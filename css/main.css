@@ -1,3 +1,7 @@
+
+@import url('normalize.css');
+@import url('../lightbox/lightbox.css');
+
 /*
  * HTML5 Boilerplate
  *
@@ -218,6 +222,8 @@ a:hover{
 .textContent{
 	width: 960px;
 	margin: 0 auto;
+	padding-left: 50px;
+    padding-right: 50px;
 }
 
 .boxgrid{
@@ -254,7 +260,7 @@ a:hover{
 }
 
 .mugshot{
-	margin: 2em 0 2em 2em;
+	margin: 2em 0 1em 2em;
 }
 
 .marginReset{
@@ -262,7 +268,7 @@ a:hover{
 }
 
 .contactme{
-	width:60%;
+	width:70%;
 }
 
 .contactme ul {
@@ -274,7 +280,7 @@ a:hover{
 }
 
 /* FOOTER */
-footer {
+footer, .aboutLink {
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -288,7 +294,7 @@ footer {
 }
 
 footer .marginReset{
-	margin-left:10px;
+	margin-left: 10px;
 }
 
 .copyright .entity{
@@ -404,20 +410,6 @@ footer .marginReset{
     *zoom: 1;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for high resolution devices */
-}
 
 /* ==========================================================================
    Print styles.
@@ -491,135 +483,24 @@ footer .marginReset{
     }
 }
 
-    /* Carousel
+    /* Fader
     -------------------------------------------------- */
 
-    /* Carousel base class */
-	
-	.carousel {
-  position: relative;
-  line-height: 1;
-}
+	.fader {
+	  position: relative;
+	  width: 100%;
+	  overflow: hidden;
+	}
 
-.carousel-inner {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-inner > .slide {
-  position: relative;
-  display: none;
-  -webkit-transition: 0.6s ease-in-out left;
-     -moz-transition: 0.6s ease-in-out left;
-       -o-transition: 0.6s ease-in-out left;
-          transition: 0.6s ease-in-out left;
-}
-
-.carousel-inner > .slide > img {
-  display: block;
-  line-height: 1;
-}
-
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  display: block;
-}
-
-.carousel-inner > .active {
-  left: 0;
-}
-
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.carousel-inner > .next {
-  left: 100%;
-}
-
-.carousel-inner > .prev {
-  left: -100%;
-}
-
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-  left: 0;
-}
-
-.carousel-inner > .active.left {
-  left: -100%;
-}
-
-.carousel-inner > .active.right {
-  left: 100%;
-}
-.no-touch .carousel-control{
-	display: none;
-}
-.carousel-control {
-  position: absolute;
-  top: 40%;
-  left: 15px;
-  width: 40px;
-  height: 40px;
-  margin-top: -20px;
-  font-size: 60px;
-  font-weight: 100;
-  line-height: 30px;
-  color: #ffffff;
-  text-align: center;
-  background: #222222;
-  border: 3px solid #ffffff;
-  -webkit-border-radius: 23px;
-     -moz-border-radius: 23px;
-          border-radius: 23px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-}
-
-.carousel-control.right {
-  right: 15px;
-  left: auto;
-}
-
-.carousel-control:hover {
-  color: #ffffff;
-  text-decoration: none;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-	
-    .carousel .container {
-      position: relative;
-      z-index: 9;
+    .fader-inner {
+	  margin: 20px 20px 0;
     }
-
-    .carousel-control {
-      height: 80px;
-      margin-top: 0;
-      font-size: 120px;
-      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-      background-color: transparent;
-      border: 0;
-    }
-
-    .carousel .slide {
-      height: 500px;
-	  margin-top: 20px;
-	  margin-left: 20px;
-	  margin-right: 20px;
-    }
-    .carousel img {
-      position: absolute;
+    .fader img {
       top: 0;
       left: 0;
       min-width: 100%;
-      height: auto;
+	  height: auto;
+      width: auto;
     }
 	
 	 /* Sticky footer styles
@@ -650,54 +531,46 @@ footer .marginReset{
     /* RESPONSIVE CSS
     -------------------------------------------------- */
 
-    @media (max-width: 979px) {
-
-      .carousel .slide {
-        height: 500px;
-      }
-      .carousel img {
-        width: auto;
-        height: auto;
-      }
+	@media (max-width: 1280px) {	
+	    .fader-inner {
+		  max-height: 300px;
+		}
 	}
-
+	
+	@media (max-width: 979px) {	
+	    .fader-inner {
+		  max-height: 250px;
+		}
+		.textContent, .grid_12 {
+			width: auto;
+		}
+		.contactme{
+			width:100%;
+		}
+		.logo{
+			width: auto;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	
     @media (max-width: 767px) {
-
-      .carousel {
-        margin-left: -20px;
-        margin-right: -20px;
-      }
-      .carousel .container {
-
-      }
-      .carousel .slide {
-        height: 300px;
-      }
-
-	  .logo{
-		width: auto;
-		padding-left: 20px;
-		padding-right: 20px;
-		margin-top: -100px;
-	  } 
-	  .textContent, .grid_12{
-		  width:auto;
-          padding-left: 20px;
-          padding-right: 20px;
-	  }
-	  .contactme li {
+	    .fader-inner {
+		  max-height: 150px;
+		}
+		.mugshot{
+			float: none;
+			margin-left: 0;
+			margin-bottom: 2em;
+		}	  
+		.contactme li {
 			display: block;
 		}
-
     }
 	
-	@media (max-width: 480px) {
-	
-		#myCarousel{
+	@media (max-width: 640px) {	
+		.fader{
 			display: none;
-			}
-		.logo{
-		margin-top: 0;
-	  } 
+		}
 	}
 	     

@@ -30,13 +30,13 @@
 
     /* Special class on .container surrounding .navbar, used for positioning it into place. */
     .navbar-wrapper {
-      position: absolute;
+      /*position: absolute;
       top: 0;
       left: 0;
       right: 0;
       z-index: 10;
       margin-top: 20px;
-      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+      margin-bottom: -90px;*/ /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
     }
     .navbar-wrapper .navbar {
 
@@ -287,7 +287,7 @@
     ================================================== -->
     <div class="navbar-wrapper">
       <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-      <div class="container">
+      <div class="container" style="width:auto">
 
         <div class="navbar navbar-inverse">
           <div class="navbar-inner">
@@ -301,7 +301,7 @@
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
 				<header style="background-image: none">
-					<div class="row">
+					<div class="row" style="padding: 0">
 						<a href="index.html"><span class="column grid_8"><img src="assets/img/smallNegative.jpg"></span></a>
 						<nav class="column grid_2">
 							<span><a href="index.html">Portofolio</a></span>

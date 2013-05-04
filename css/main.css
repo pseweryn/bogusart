@@ -195,6 +195,7 @@ header {
 header .row{
 	background-color: #000;
 	padding: 1em;
+	padding-bottom: 3em;
 }
 
 .logo {
@@ -206,6 +207,8 @@ header .row{
 header ul{
 	display:none;
 	padding-left: 1em;
+	position: absolute;
+
 }
 header li:nth-child(1){
 	border-top: 1px solid #4F4F4F;
@@ -213,9 +216,10 @@ header li:nth-child(1){
 }
 header li{
 	margin-bottom: 5px;
+
 }
 header nav{
-	padding-top: 60px;
+	padding-bottom: 60px;
 }
 nav span{
 	padding-left: 1em;
@@ -234,12 +238,12 @@ section{
 	margin: 0 auto;
 	background: rgba(29, 29, 29, 0.3);
 	/* bottom padding for footer */
-	padding:1em 1em 5em; 
+	padding:1em 1em 12em; 
 }
 
 .boxgrid{
-	width: 300px;
-	height: 300px;
+	width: 270px;
+	height: 270px;
 	float:left;
 	background:#161613;
 	overflow: hidden;
@@ -316,10 +320,12 @@ footer span {
 footer ul{
 	padding-left: 1em;
 	display: none;
+	position: absolute;
+	bottom: 30px;
 }
-footer li:nth-child(1){
-	border-top: 1px solid #4F4F4F;
-	padding-top: 1em;
+footer li:last-child{
+	border-bottom: 1px solid #4F4F4F;
+	padding-bottom: 1em;
 }
 footer li{
 	margin-bottom: 5px;
@@ -343,6 +349,11 @@ img.center {
 
 .item {
 	margin-top: 20px;
+}
+
+.item .center{
+	width: 200px;
+	height: 200px;
 }
 
 /* END OF IMAGES */

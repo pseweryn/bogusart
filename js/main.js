@@ -6,7 +6,6 @@ $(document).ready(function(){
 	});
 	$('footer .row').hover(function(){
 		$('footer ul').slideDown();
-		$("html, body").animate({ scrollTop: $(document).height() }, 1000);
 	}, function() {
 		$('footer ul').slideUp();
 	});

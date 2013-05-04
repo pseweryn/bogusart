@@ -107,47 +107,14 @@ html,body {
 	padding:0;
 	height:100%; /* needed for container min-height */
 	background-image: url(../img/pattern3.png);
-	background-color: #424242;
+	background-color: #3A3A3A;
+	color: #AAAAAA;
 	border: none;
-	cursor: auto;
-}
-
-body{	
+	cursor: auto;	
 	/*font-family: 'droid_sansregular', Helvetica, Arial, sans-serif;
 	 font-family: 'gandhi_sansregular', Helvetica, Arial, sans-serif;*/
 	font-family: 'inderregular', Helvetica, Arial, sans-serif;
 }
-
-div#container {
-	position:relative; /* needed for footer positioning*/
-	margin:0 auto; /* center, not in IE5 */
-	height:auto !important; /* real browsers */
-	height:100%; /* IE6: treaded as min-height*/
-	min-height:100%; /* real browsers */
-}
-
-div#header {
-	padding: 0.5em;
-}
-/*
-div#content {
-	padding:1em 1em 5em;  bottom padding for footer 
-	margin-bottom: 70px;
-}*/
-
-div#footer {
-	padding: 0.5em;
-	/*pwidth: 960px;
-	margin: 0 auto;}*/
-}
-
-/*p::first-letter {
-margin-top: -12px;
-margin-right: 4px;
-float: left;
-font-size: 72px;
-color: #999;
-}*/
 
 h1{
 	margin: 10px;
@@ -158,20 +125,18 @@ p{
 	text-justify: distribute;
 }
 
+a{
+	text-decoration: none;
+	color: #AAAAAA;
+}
+
 li a, h1 a {
 	padding: 2px;
-	-moz-border-radius: 30px;
-	-webkit-border-radius: 30px;
-	border-radius: 30px;
 }
 
-li a:hover, h1 a:hover{
+a:hover{
 	color: #FFF;
-	/*background-image: linear-gradient(#4F4F4F, #FFF);*/
-	/*background-color: #FFF;*/
-	/*border: 1px solid #4F4F4F;*/
 }
-
 
 /* ================ */
 /* = The 1Kb Grid = */     /* 12 columns, 60 pixels each, with 20 pixel gutter */
@@ -207,153 +172,44 @@ li a:hover, h1 a:hover{
 	display: inline-block;
 }
 
-#gallery {
-}
-
-#gallery .boxgrid{
-width: 300px;
-height: 300px;
-float:left;
-background:#161613;
-overflow: hidden;
-position: relative;
-margin-bottom: 20px;
-}
-
-#gallery .boxgrid img{
-position: absolute;
-top: 0;
-left: 0;
-border: 0;
-}
-
-#gallery .boxcaption{
-float: left;
-position: absolute;
-top: 300px;
-background: #000;
-height: 100px;
-width: 100%;
-text-align:right;
-color:#FFFFFF;
-opacity: .8;
-/* For IE 5-7 */
-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-/* For IE 8 */
--MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-}
-
-#gallery .galleryblur{
-padding-bottom: 20px;
+#container {
+	position:relative; /* needed for footer positioning*/
+	margin:0 auto; /* center, not in IE5 */
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+	min-height:100%; /* real browsers */
 }
 
 /* HEADER */
-A{text-decoration: none;
-color: #AAAAAA;}
-
 #header {
-/*width: 960px;
-margin: 0 auto;
-background-color: #4F4F4F;
-background-image: -moz-linear-gradient(#000, #141414, #282A2A);*/
-background-color: #000;
-padding-top: 20px;
-/*-moz-border-radius: 20px;
--webkit-border-radius: 20px;
-border-radius: 20px;*/
+	/*background-image: -moz-linear-gradient(#000, #141414, #282A2A);*/
+	background-color: #000;
+	padding: 0.5em;
 }
 
-#header  .row{
-/*background-color: #000;
--moz-border-radius: 15px;
--webkit-border-radius: 15px;
-border-radius: 15px;
-background-image: -moz-linear-gradient(#000, #141414, #282A2A);*/
+#logo {
+	background-image: url(../img/bogusartNegative.jpg);
+	background-repeat: no-repeat;
+	height: 150px;
+	margin-bottom:20px;
 }
 
-#navcontainer{
-}
-
-#header #logo {
-background-image: url(../img/bogusartNegative.jpg);
-background-repeat: no-repeat;
-height: 150px;
-margin-bottom:20px;
-}
-
-#header #navlist li
+#navlist li
 {
-float: right;
-display: inline;
-list-style-type: none;
-padding-left: 20px;
-padding-left: 20px;
-margin-top: 40px;
-margin-bottom: 5px;
+	float: right;
+	display: inline;
+	list-style-type: none;
+	padding-left: 20px;
+	padding-left: 20px;
+	margin-top: 40px;
+	margin-bottom: 5px;
 }
-
-/*#navlist {
-margin: 0;
-padding: 7px 6px 0;
-background: #7d7d7d;
-line-height: 100%;
-border-radius: 2em;
--webkit-border-radius: 2em;
--moz-border-radius: 2em;
--webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
--moz-box-shadow: 0 1px 3px rgba(0,0,0,.4);
-box-shadow: 0 1px 3px rgba(0,0,0,.4);
-background: -webkit-gradient(linear, left top, left bottom, from(darkGray), to(rgb(122,
-122, 122)));
-background: -moz-linear-gradient(top, darkGray, rgb(122, 122, 122));
-}
-
-#navlist .current a, #navlist li:hover > a {
-background: #666;
-color: #444;
-border-top: solid 1px #f8f8f8;
--webkit-box-shadow: 0 1px 1px rgba(0,0,0,.2);
--moz-box-shadow: 0 1px 1px rgba(0,0,0,.2);
-box-shadow: 0 1px 1px rgba(0,0,0,.2);
-text-shadow: 0 1px 0 rgba(255,255,255,1);
-background: -webkit-gradient(linear, left top, left bottom, from(rgb(235,
-235, 235)), to(rgb(161, 161, 161)));
-background: -moz-linear-gradient(top, rgb(235, 235, 235), rgb(161, 161,
-161));
-}
-
-#navlist ul {
-display: none;
-margin: 0;
-padding: 0;
-width: 185px;
-position: absolute;
-top: 35px;
-left: 0;
-background: #ddd;
-border: solid 1px #b4b4b4;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
--webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);
--moz-box-shadow: 0 1px 3px rgba(0,0,0,.2);
-box-shadow: 0 1px 3px rgba(0,0,0,.2);
-background: -webkit-gradient(linear, left top, left bottom,
-from(white), to(rgb(207, 207, 207)));
-background: -moz-linear-gradient(top, white, rgb(207, 207, 207));
-}*/
 
 /* END OF HEADER */
 
 /* CONTENT */
 
-
-
-#content {
-color: #AAAAAA;
-}
-
-#content .layoutGrey{
+.layoutGrey{
 	width: 960px;
 	margin: 0 auto;
 	background: rgba(29, 29, 29, 0.3);
@@ -361,139 +217,110 @@ color: #AAAAAA;
 	padding:1em 1em 5em; 
 }
 
-#content .row {
-/*background: rgba(102, 102, 102, 0.2);*/
-}
-/*#content .headline{
-	padding: 0.5em;
-	width: 960px;
-	margin: 0 auto;
-}*/
-
-img.floatleft{
-float: left;
-padding-right: 1em;
-padding-bottom: 1em;
+#gallery .boxgrid{
+	width: 300px;
+	height: 300px;
+	float:left;
+	background:#161613;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 20px;
 }
 
-img.floatright{
-float: right;
-padding-left: 1em;
-padding-top: 1em;
+#gallery .boxgrid img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 0;
+}
+
+#gallery .boxcaption{
+	float: left;
+	position: absolute;
+	top: 300px;
+	background: #000;
+	height: 100px;
+	width: 100%;
+	text-align:right;
+	color:#FFFFFF;
+	opacity: .8;
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+#gallery .galleryblur{
+	padding-bottom: 20px;
 }
 
 .floatright{
-float: right;
-padding: 0.5em;
-margin: 2em 0 2em 2em;
-background-color: #FFF;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-border-radius: 10px;
+	float: right;
+	padding: 0.5em;
+	margin: 2em 0 2em 2em;
+	background-color: #FFF;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
 }
 
 .contactme{
-width:50%;
-/*background-image: linear-gradient(#000, #141414, #282A2A);
-background-image: -o-linear-gradient(#000, #141414, #282A2A);
-background-image: -moz-linear-gradient(#000, #141414, #282A2A);
-background-image: -webkit-linear-gradient(#000, #141414, #282A2A);
-background-image: -ms-linear-gradient(#000, #141414, #282A2A);
-background-color: #000;
--moz-border-radius: 20px;
--webkit-border-radius: 20px;
-border-radius: 20px;*/
+	width:50%;
 }
 
-/*.contactme p{
-padding-left: 40px;
-}*/
-
 .contactlist {
-padding-left: 0px;
+	padding-left: 0px;
 }
 
 .contactlist li {
-display: inline;
-list-style-type: none;
+	display: inline;
+	list-style-type: none;
 }
 /* END OF CONTENT */
 
 /* FOOTER */
 #footer {
-background-image: linear-gradient(#282A2A, #141414, #000);
-background-image: -o-linear-gradient(#282A2A, #141414, #000);
-background-image: -moz-linear-gradient(#282A2A, #141414, #000);
-/*background-image: -moz-linear-gradient(#242525, #282A2A, #141414, #000);*/
-background-image: -webkit-linear-gradient(#282A2A, #141414, #000);
-background-image: -ms-linear-gradient(#282A2A, #141414, #000);
-background-color: #000;
-color: #AAAAAA;
-/*-moz-border-radius: 20px;
--webkit-border-radius: 20px;
-border-radius: 20px;*/
-}
-
-#footer  .row{
-/*background-image: linear-gradient(#3A3A3A, #4F4F4F);
-background-image: -o-linear-gradient(#3A3A3A, #4F4F4F);
-background-image: -moz-linear-gradient(#3A3A3A, #4F4F4F);
-background-image: -webkit-linear-gradient(#3A3A3A, #4F4F4F);
-background-image: -ms-linear-gradient(#3A3A3A, #4F4F4F);
-background-color: #3A3A3A;*/
--moz-border-radius: 15px;
--webkit-border-radius: 15px;
-border-radius: 15px;
+	background-image: linear-gradient(#282A2A, #141414, #000);
+	background-image: -o-linear-gradient(#282A2A, #141414, #000);
+	background-image: -moz-linear-gradient(#282A2A, #141414, #000);
+	/*background-image: -moz-linear-gradient(#242525, #282A2A, #141414, #000);*/
+	background-image: -webkit-linear-gradient(#282A2A, #141414, #000);
+	background-image: -ms-linear-gradient(#282A2A, #141414, #000);
+	background-color: #000;
+	color: #AAAAAA;
+	padding: 0.5em;
 }
 
 #footer h1 {
-border-bottom: 1px solid #4F4F4F;
-width: 300px;
-padding-bottom: 5px;
+	border-bottom: 1px solid #4F4F4F;
+	width: 300px;
+	padding-bottom: 5px;
 }
 
-#footer .footerlist
-{
-padding-left: 1em;
+.footerlist{
+	padding-left: 1em;
 }
 
-#footer .footerlist li
-{
-margin-bottom: 5px;
-list-style-type: none;
+.footerlist li{
+	margin-bottom: 5px;
+	list-style-type: none;
 }
+
+/* END OF FOOTER */
+
+/* IMAGES */
 
 img.center {
-display: block;
-margin-left: auto;
-margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .item {
-margin-top: 20px;
-/*padding-top: 0.5em;
-padding-bottom: 0.5em;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-border-radius: 10px;*/
-/*-moz-border-image: url(../img/greyLogoBackground.png) 27 repeat stretch;*/
-/*background-color: #FFF;*/
+	margin-top: 20px;
 }
-.item:hover{
-/*background-color: #4F4F4F;
-background-color: #FFF;*/
-}
-/*.item.color{
-margin-top: 20px;
-padding-top: 0.5em;
-padding-bottom: 0.5em;
-background-color: #FFF;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-border-radius: 10px;
-}*/
 
-/* END OF FOOTER */
+/* END OF IMAGES */
 
 /* ==========================================================================
    Helper classes

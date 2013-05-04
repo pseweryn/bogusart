@@ -203,16 +203,23 @@ header .row{
 	height: 150px;
 	margin-bottom:20px;
 }
-
-nav span, nav a 
-{
-	float: right;
-	display: inline;
-	padding-left: 20px;
-	padding-left: 20px;
-	margin-top: 60px;
+header ul{
+	display:none;
+	padding-left: 1em;
+}
+header li:nth-child(1){
+	border-top: 1px solid #4F4F4F;
+	padding-top: 1em;
+}
+header li{
 	margin-bottom: 5px;
 }
+header nav{
+	padding-top: 60px;
+}
+nav span{
+	padding-left: 1em;
+} 
 
 /* END OF HEADER */
 
@@ -300,20 +307,20 @@ footer .row{
 	background: rgba(0, 0, 0, 0.2);
 	padding: 1em;
 }
-footer .row div:nth-child(1){
-	width:286px;
-}
 
-footer h1 {
-	border-bottom: 1px solid #4F4F4F;
+footer span {
 	width: 300px;
-	padding-bottom: 5px;
+	padding-left: 1em;
 }
 
 footer ul{
 	padding-left: 1em;
+	display: none;
 }
-
+footer li:nth-child(1){
+	border-top: 1px solid #4F4F4F;
+	padding-top: 1em;
+}
 footer li{
 	margin-bottom: 5px;
 }

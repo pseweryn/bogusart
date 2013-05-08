@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Zbigniew Boguslawski> -- <artwork & design>
+	<Pawel Seweryn> -- <code, markup & styles> -- <http://twitter.com/pawelseweryn>
+	
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr, Sammy.js, Mustache.js, Innerfade.js, h5bp, Bootstrap

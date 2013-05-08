@@ -9,7 +9,7 @@ HTML5, CSS3, jQuery, Sammy.js, Mustache.js, Innerfade.js, h5bp, Bootstrap .. and
 highlights 
 ========
 - hash-based navigation which provides single page application look and feel (courtesy of Sammy.js)
-- semi-responsive web design
+- semi-responsive design (everything besides lightbox)
 
 issues
 ========

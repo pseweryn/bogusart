@@ -1,17 +1,25 @@
   
 var engine = $.sammy(function() {
 	
+	var $this = this;
 	var folders = ['illustrations', 'drawings', 'graphics', 'photos', 'paintings', 'other'];
 	var routes = ['#/' + folders[0], '#/' + folders[1], '#/' + folders[2], '#/' + folders[3], '#/' + folders[4], '#/' + folders[5]];
 	
-	this.use('Mustache', 'ms');
-	this.element_selector = '#portofolio';  
+	var illustrations = ['/00clearcutfull.jpg', '/00CoverFullCleaned.jpg', '/00PosterFullcleaned.jpg', '/01atomictree.jpg', '/01farwellSmaller.jpg', '/01healingFire.jpg', '/01regrowthAndFrame.jpg', '/chmurkosluz.jpg', '/czachopismoBabcia.jpg', '/czachopismoPotworek.jpg', '/dwiewiorki.jpg', '/HHAAcopy.jpg', '/horror2.jpg', '/img063.jpg', '/img067.jpg', '/krzakowykonkret.jpg', '/Misio.jpg', '/N-AM_I_Ideas_and_Concepts.jpg', '/N-AM_II_Theory_and_Practice.jpg', '/N-AM_III_Methodology.jpg', '/Odkrywcy-AugustePiccard.jpg', '/Odkrywcy-RichardBurton-forweb.jpg', '/Odkrywcy-Statek.jpg', '/prapramiasto.jpg', '/sharpmind.jpg', '/stforki.jpg', '/wsz.jpg', '/XVXhands.jpg'];
+	var drawings = ['/IMG2_7009.jpg', '/ink_sketch.jpg', '/img040.jpg', '/sittingSquatter.jpg', '/wrrr.jpg', '/img083.jpg', '/Jess1.jpg', '/Jess2.jpg', '/Jess3.jpg', '/squattingSquatter.jpg', '/img042.jpg', '/judoSitting.jpg', '/sketchJudo.jpg', '/Untitled_Panorama1.jpg', '/szkicforweb.jpg', '/img038.jpg', '/IMG_6niou937.jpg', '/IMG_6939.jpg'];
+	var graphics = ['/Dyplom1.jpg', '/Dyplom2.jpg', '/Dyplom3.jpg', '/Dyplom4.jpg', '/Dyplom5.jpg', '/Dyplom6.jpg', '/LinorytPostPlener.jpg', '/Reqiem.jpg', '/06.jpg', '/autoportret.jpg', '/newspaperscream.jpg', '/kloszard.jpg', '/budzaSie.jpg', '/testing8.jpg', '/testing9.jpg', '/testing3.jpg'];
+	var photos = ['/image023.jpg', '/img503.jpg', '/img504.jpg', '/random096.jpg', '/random099.jpg', '/image005.jpg', '/DSC05579.JPG', '/DSC02263.JPG', '/105_0592.JPG', '/DSC03032.JPG', '/DSC02418.JPG', '/foto119a.jpg', '/DSC03009.JPG', '/foto010.jpg', '/foto022.jpg', '/img370a.jpg', '/img465.jpg', '/pix002.jpg', '/random207.jpg', '/foto071.jpg', '/foto070.jpg', '/foto048.jpg', '/IMG_0367.JPG', '/SN8507102.JPG', '/szaruga.jpg'];
+	var paintings = ['/20.jpg', '/21.jpg', '/chata.jpg', '/domek1.jpg', '/karyn.jpg'];
+	var other = ['/poster_smaller.jpg', '/vasXe_jotpeg.jpg'];
+	
+	$this.use('Mustache', 'ms');
+	$this.element_selector = '#portofolio';  
 
-	this.get('#/portofolio', function(context) {
+	$this.get('#/portofolio', function(context) {
 	initFader();
 	$('footer').show();
 		  context.app.swap('');
-		  this.renderEach('templates/box.ms', [{link: routes[0], img:'illustr.jpg', title: folders[0]}, 
+		  context.renderEach('templates/box.ms', [{link: routes[0], img:'illustr.jpg', title: folders[0]}, 
 											  {link: routes[1], img:'draw.jpg', title: folders[1]},
 											  {link: routes[2], img:'gfx.jpg', title: folders[2]},
 											  {link: routes[3], img:'photo2.jpg', title: folders[3]},
@@ -20,61 +28,44 @@ var engine = $.sammy(function() {
 											  .appendTo(context.$element());	
 	  });  
   
-  	this.get(routes[0], function(context) {
-	$('.fader-inner').remove();
-	$('footer').show();
-		  context.app.swap('');
-		  context.$element().append('<h1>' + folders[0] +'</h1>');
-		  this.renderEach('templates/image.ms', [{link: folders[0] + '/00clearcutfull.jpg'}, {link: folders[0] + '/00CoverFullCleaned.jpg'}, {link: folders[0] + '/00PosterFullcleaned.jpg'}, {link: folders[0] + '/01atomictree.jpg'}, {link: folders[0] + '/01farwellSmaller.jpg'}, {link: folders[0] + '/01healingFire.jpg'}, {link: folders[0] + '/01regrowthAndFrame.jpg'}, {link: folders[0] + '/chmurkosluz.jpg'}, {link: folders[0] + '/czachopismoBabcia.jpg'}, {link: folders[0] + '/czachopismoPotworek.jpg'}, {link: folders[0] + '/dwiewiorki.jpg'}, {link: folders[0] + '/HHAAcopy.jpg'}, {link: folders[0] + '/horror2.jpg'}, {link: folders[0] + '/img063.jpg'}, {link: folders[0] + '/img067.jpg'}, {link: folders[0] + '/krzakowykonkret.jpg'}, {link: folders[0] + '/Misio.jpg'}, {link: folders[0] + '/N-AM_I_Ideas_and_Concepts.jpg'}, {link: folders[0] + '/N-AM_II_Theory_and_Practice.jpg'}, {link: folders[0] + '/N-AM_III_Methodology.jpg'}, {link: folders[0] + '/Odkrywcy-AugustePiccard.jpg'}, {link: folders[0] + '/Odkrywcy-RichardBurton-forweb.jpg'}, {link: folders[0] + '/Odkrywcy-Statek.jpg'}, {link: folders[0] + '/prapramiasto.jpg'}, {link: folders[0] + '/sharpmind.jpg'}, {link: folders[0] + '/stforki.jpg'}, {link: folders[0] + '/wsz.jpg'}, {link: folders[0] + '/XVXhands.jpg'}]).appendTo(context.$element());		
+  	$this.get(routes[0], function(context) {
+		renderImages(context, 0, illustrations);	
 	  });
 
-  	this.get(routes[1], function(context) {
-	$('.fader-inner').remove();
-	$('footer').show();
-		  context.app.swap('');
-		  context.$element().append('<h1>' + folders[1] +'</h1>');
-		  this.renderEach('templates/image.ms', [{link: folders[1] + '/IMG2_7009.jpg'},{link: folders[1] + '/ink_sketch.jpg'}, {link: folders[1] + '/img040.jpg'}, {link: folders[1] + '/sittingSquatter.jpg'}, {link: folders[1] + '/wrrr.jpg'}, {link: folders[1] + '/img083.jpg'}, {link: folders[1] + '/Jess1.jpg'}, {link: folders[1] + '/Jess2.jpg'}, {link: folders[1] + '/Jess3.jpg'}, {link: folders[1] + '/squattingSquatter.jpg'}, {link: folders[1] + '/img042.jpg'}, {link: folders[1] + '/judoSitting.jpg'}, {link: folders[1] + '/sketchJudo.jpg'}, {link: folders[1] + '/Untitled_Panorama1.jpg'}, {link: folders[1] + '/szkicforweb.jpg'}, {link: folders[1] + '/img038.jpg'}, {link: folders[1] + '/IMG_6niou937.jpg'}, {link: folders[1] + '/IMG_6939.jpg'}]).appendTo(context.$element());		
+  	$this.get(routes[1], function(context) {
+		renderImages(context, 1, drawings);		
 	  });
 	  
-  	this.get(routes[2], function(context) {
-	$('.fader-inner').remove();
-	$('footer').show();
-		  context.app.swap('');
-		  context.$element().append('<h1>' + folders[2] +'</h1>');
-		  this.renderEach('templates/image.ms', [{link: folders[2] + '/Dyplom1.jpg'}, {link: folders[2] + '/Dyplom2.jpg'}, {link: folders[2] + '/Dyplom3.jpg'}, {link: folders[2] + '/Dyplom4.jpg'}, {link: folders[2] + '/Dyplom5.jpg'}, {link: folders[2] + '/Dyplom6.jpg'}, {link: folders[2] + '/LinorytPostPlener.jpg'}, {link: folders[2] + '/Reqiem.jpg'}, {link: folders[2] + '/06.jpg'}, {link: folders[2] + '/autoportret.jpg'}, {link: folders[2] + '/newspaperscream.jpg'}, {link: folders[2] + '/kloszard.jpg'}, {link: folders[2] + '/budzaSie.jpg'}, {link: folders[2] + '/testing8.jpg'}, {link: folders[2] + '/testing9.jpg'}, {link: folders[2] + '/testing3.jpg'}]).appendTo(context.$element());		
+  	$this.get(routes[2], function(context) {
+		renderImages(context, 2, graphics);	
 	  });
 	  
-  	this.get(routes[3], function(context) {
-	$('.fader-inner').remove();
-	$('footer').show();
-		  context.app.swap('');
-		  context.$element().append('<h1>' + folders[3] +'</h1>');
-		  this.renderEach('templates/image.ms', [{link: folders[3] + '/image023.jpg'}, {link: folders[3] + '/img503.jpg'}, {link: folders[3] + '/img504.jpg'}, {link: folders[3] + '/random096.jpg'}, {link: folders[3] + '/random099.jpg'}, {link: folders[3] + '/image005.jpg'}, {link: folders[3] + '/DSC05579.JPG'}, {link: folders[3] + '/DSC02263.JPG'}, {link: folders[3] + '/105_0592.JPG'},  {link: folders[3] + '/DSC03032.JPG'}, {link: folders[3] + '/DSC02418.JPG'}, {link: folders[3] + '/foto119a.jpg'}, {link: folders[3] + '/DSC03009.JPG'}, {link: folders[3] + '/foto010.jpg'}, {link: folders[3] + '/foto022.jpg'}, {link: folders[3] + '/img370a.jpg'}, {link: folders[3] + '/img465.jpg'}, {link: folders[3] + '/pix002.jpg'}, {link: folders[3] + '/random207.jpg'}, {link: folders[3] + '/foto071.jpg'}, {link: folders[3] + '/foto070.jpg'}, {link: folders[3] + '/foto048.jpg'}, {link: folders[3] + '/IMG_0367.JPG'}, {link: folders[3] + '/SN8507102.JPG'}, {link: folders[3] + '/szaruga.jpg'}]).appendTo(context.$element());		
+  	$this.get(routes[3], function(context) {
+		renderImages(context, 3, photos);				  		
 	  });
 	  
-	this.get(routes[4], function(context) {
-	$('.fader-inner').remove();
-	$('footer').show();
-		  context.app.swap('');
-		  context.$element().append('<h1>' + folders[4] +'</h1>');
-		  this.renderEach('templates/image.ms', [{link: folders[4] + '/20.jpg'}, {link: folders[4] + '/21.jpg'}, {link: folders[4] + '/chata.jpg'}, {link: folders[4] + '/domek1.jpg'}, {link: folders[4] + '/karyn.jpg'}]).appendTo(context.$element());		
+	$this.get(routes[4], function(context) {
+		renderImages(context, 4, paintings);		
 	  });
 	  
-	this.get(routes[5], function(context) {
-	$('.fader-inner').remove();
-	$('footer').show();
-		  context.app.swap('');
-		  context.$element().append('<h1>' + folders[5] +'</h1>');
-		  this.renderEach('templates/image.ms', [{link: folders[5] + '/poster_smaller.jpg'}, {link: folders[5] + '/vasXe_jotpeg.jpg'}]).appendTo(context.$element());		
+	$this.get(routes[5], function(context) {
+		renderImages(context, 5, other);
 	  });
 	  
-	this.get('#/about', function(context) {
-	$('.fader-inner').remove();
-	$('footer').hide();
-		  context.app.swap('');
-		  this.render('templates/about.ms')
-		  .appendTo(context.$element());		  
-	  });   	  
+	$this.get('#/about', function(context) {
+		toggleFaderAndFooter();
+		context.app.swap('');
+		context.render('templates/about.ms').appendTo(context.$element());		  
+	  });
+		  
+	function renderImages(context, f, images){
+		toggleFaderAndFooter(true);
+		context.app.swap('');
+		context.$element().append('<h1>' + folders[f] +'</h1>');
+		for(var i = 0; i < images.length; i++){
+			context.renderEach('templates/image.ms', [{link: folders[f] + images[i]}]).appendTo(context.$element());	
+		}
+	}	  
 });
 
 function initFader(){
@@ -93,6 +84,15 @@ function isMobile(){
 	return document.body.clientWidth <= 640;
 }
 
+function toggleFaderAndFooter(showFooter){
+	$('.fader-inner').remove();
+	if(showFooter){
+		$('footer').show();
+	}
+	else {
+		$('footer').hide();
+	}
+}
 
 $(function() {
 	engine.run('#/portofolio');
